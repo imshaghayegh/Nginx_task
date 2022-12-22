@@ -3,22 +3,20 @@
 
 What you’ll build
 ________________
-
-
 You’ll set up 3 nginx servers, one of them works as a load balancer.
+
+
 What you’ll need
 ________________
-
-
 1. 3 virtual machines (use virtual box or VMware tools)
 * Virtual box guide: https://www.nakivo.com/blog/use-virtualbox-quick-overview/
 * VMware guide: https://kb.vmware.com/s/article/1018415
 * Or any other documentation. I used Ubuntu 20.4 in this project so I suggest you use this distro, in order to come along well with this tutorial.
 2. Docker and docker compose installed on your machines.
+
+
 Set up the project
 ________________
-
-
 We have almost similar installation process for each nginx server so do these steps in all of your machines:
 
 
