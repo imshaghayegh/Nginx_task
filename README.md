@@ -45,8 +45,7 @@ Now as you used volumes in your docker-compose file, you can change nginx.conf a
 
 As I wanted to use one of my nginx servers as a load balancer, I added some lines to the http context of the nginx.conf file of my load balancer machine like this : 
 
-
-http {        
+       http {        
        # we use upstream context for load balancing
         upstream backend {
                 server 192.168.88.127;        #first nginx server running on port 80
@@ -65,23 +64,13 @@ http {
                 location /nginx172 {
                         proxy_pass http://172.16.30.16/;
                 }
-
-
         }}
+
+
 Now If you search http://localhost:/nginx172 in your browser in the load balance machine you get the result of 172.16.30.16 machine.
-
-
-
-
-  
-
-
-
-
+	-----> hello from 172.16...
 
 And If you search http://localhost:/nginx192 in your browser in the load balance machine you get the result of 192.168.88.127 machine.
-
-
-  
+	-----> hello from 192.168....
 
 And If you search http://localhost in your browser in the load balance machine you get the result of 172.16.30.16 machine and 192.168.88,127 machine randomly (round robin).
