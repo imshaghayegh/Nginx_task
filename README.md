@@ -35,7 +35,7 @@ If you have another service on your 80 port, use another port like 81 or … .
 
 5. Now run this command in your docker compose file directory:
 
-$ docker-compose up -d
+        $ docker-compose up -d
 
 
 If everything goes well, you can search localhost:<port> in the browser of each machine and see nginx server is up and running.
